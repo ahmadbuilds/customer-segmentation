@@ -1,0 +1,40 @@
+Customer Segmentation Model Results Summary
+
+1. Dataset Overview:
+The dataset used for this project is 'Mall_Customers.csv', which contains information about customers of a mall. The dataset includes the following features:
+- CustomerID: Unique identifier for each customer
+- Gender: Male/Female
+- Age: Age of the customer
+- Annual Income (k$): Annual income in thousands of dollars
+- Spending Score (1-100): Score assigned by the mall based on customer behavior and spending nature
+
+This dataset provides a rich basis for understanding customer demographics and purchasing behavior, which is essential for effective segmentation.
+
+2. Data Preprocessing:
+Raw data was cleaned to handle missing values and outliers. Categorical variables (such as Gender) were encoded, and numerical features were scaled to ensure fair clustering. The preprocessed data is saved in 'data/processed/preprocessed_data.csv'.
+
+3. Clustering Model:
+
+K-Means clustering was chosen for its simplicity and effectiveness in segmenting customers into distinct groups. The optimal number of clusters was determined using the Silhouette Method, which evaluates how well each data point fits within its assigned cluster compared to other clusters.
+
+Why Cluster=4?
+The Silhouette Method indicated that 4 clusters provided the highest average silhouette score, meaning customers were well-matched to their assigned clusters and distinct from other clusters. This choice allows for meaningful segmentation and clear group separation.
+
+4. Results:
+The clustering model assigned each customer to one of four segments, saved in 'data/processed/clustered_data.csv'. Visualizations were generated to illustrate the clusters:
+- 2D plot: 'reports/figures/Customer Segmentation 2D.png'
+- 3D plot: 'reports/figures/Customer Segmentation 3D.png'
+
+5. Insights:
+Each cluster represents a distinct customer segment:
+- Cluster 1: Young customers with moderate income and spending scores
+- Cluster 2: Older customers with high income but lower spending scores
+- Cluster 3: Customers with high spending scores, often younger and with varied income
+- Cluster 4: Customers with low income and low spending scores
+
+These segments help the mall target marketing strategies, personalize offers, and improve customer satisfaction.
+
+6. Conclusion:
+Customer segmentation using K-Means and 4 clusters provides actionable insights for business decision-making. The approach is scalable and can be adapted to other datasets or segmentation needs.
+
+For further details, refer to the modeling and preprocessing notebooks in 'notebooks/'.
