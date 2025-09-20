@@ -87,6 +87,7 @@ Mall Customer Segmentation
 │ ├── notebooks/
 │ ├── reports/
 │ │ └── figures/
+| | └──summary.txt 
 │ ├── requirements.txt
 │ └── src/
 ├── frontend/
