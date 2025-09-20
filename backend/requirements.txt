@@ -3,4 +3,4 @@ numpy
 fastapi[standard]
 joblib
 matplotlib
-scikit-learn=1.7.1
+scikit-learn==1.7.1
